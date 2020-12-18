@@ -5,9 +5,9 @@ Linear pricing strategy: a linear equation of inventory level
 (e.g. price = -0.75*current_inventory + 30)
 '''
 
-def constant_price():
-    return 100000
+def constant_price(constant_price):
+    return constant_price
 
 
-def linear_price():
-    pass
+def linear_price(a,b,c,inventory,freshness):
+    return a*inventory+b+c*freshness
